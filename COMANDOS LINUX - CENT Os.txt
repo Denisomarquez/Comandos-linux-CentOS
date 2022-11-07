@@ -1,0 +1,131 @@
+*** COMANDOS LINUX - CENT Os ***   
+
+{SUDO}
+sudo su
+sudo -i
+
+saindo do sudo - "chmod -r" ou "ctrl +d"  
+
+# configs de rede #
+ifconfing 
+ip a
+ip r
+
+clear - limpa tela
+
+# Desligar ou reiniciar #
+
+shutdown -h now
+shutdown -h 10, 20 ou 30 {min}
+shutdown -h 17:00 {hora prog}
+halt -p
+poweroff
+init 0
+
+
+shutdown -r now
+shutdown -r 17:00
+
+
+$ cat /proc/cpuinfo {tudo sobre a cpu}
+
+
+uname -a {versão kernel}
+
+df -h {espaços nas partiçoes}
+
+catman {base de comandos}
+umak uots -v { || }
+
+
+# arvore de diretorio #
+
+tree.
+tree /usr
+
+xman - frontend lnx
+
+# criando arquivos #
+
+touch arquivo.txt
+cd/srv touch arquivo.txt
+cd/srv touch arquivo1.txt arquivo2.txt arquivo3.txt
+
+ls - lista
+
+
+# procurar e localizar #
+
+find
+find /etc/ -name *.conf
+find /etc/ -maxdepth1 -name *.conf
+find / -amin -5 {arq acessados em ate 5min}
+find / -user
+
+
+{[(  STATIC DADOS ACESS METADADOS )]}
+
+stat /etc/passwd - dados forenses
+
+touch - cria arquivos vazios
+mkdir - cria pastas vazias 
+
+# / criando arquivo e editando / #
+
+vi teste.txt - criando arq
+i - editar - so digitar
+esc :wq - salva
+ls - lista p ver
+
+exemplo:
+
+vi teste.txt
+i
+{bla, bla, bla}
+esc:wq
+
+ls
+
+# arvores de processos #
+
+pstree - imprime os processos na arvore
+ps
+ps aux - info e cmds
+pidof - verifica PID ou nome do processo
+ps tree - arvore de processos
+
+# instalando programas #
+
+apt-get install [programa_name]
+
+apt-get install aptitude - programa de gerenciamento de install do lnx
+apt-get install figlet - programa de banner em "dos"
+apt-get install htop ou top - gerenciador
+
+figlet [nome]
+figlet Teste
+
+gerenciador simples
+
+htop
+ top
+
+
+
+{[( gerenciador 'casca grossa' )]}
+
+git clone https://github.com/aristocratos/bashtop.git
+
+cd bashtop
+
+./bashtop
+
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+criando usuario
+
+# useradd guest -c "convidado" -m -e 26/06/2022
+# passwd guest
+# usermod guest -s /bin/bash
+
+# useradd guest -c "convidado" -s /binbin/bash -m -p $(openssl pass -crypt Senha123)
